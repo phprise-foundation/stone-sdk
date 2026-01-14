@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true">
+    <testsuites>
+        <testsuite name="PagarMe SDK Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <source>
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+
+    <php>
+        <env name="PAGAR_ME_URL" value="https://api.pagar.me"/>
+        <env name="PAGAR_ME_VERSION" value="5.1"/>
+        <env name="PAGAR_ME_TOKEN" value="ak_test_1234567890"/>
+        <env name="PAGAR_ME_SERVICE_REFERER_NAME" value="SplitPaySDK"/>
+    </php>
+</phpunit>

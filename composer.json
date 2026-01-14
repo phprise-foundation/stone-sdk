@@ -1,0 +1,31 @@
+{
+    "name": "pagarme/sdk-php",
+    "description": "SDK para integração com a API da Pagar.me",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wallace",
+            "email": "wallace@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "guzzlehttp/guzzle": "^7.8",
+        "psr/http-message": "^1.1|^2.0",
+        "doctrine/collections": "^2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "StoneSdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StoneSdk\\Tests\\": "tests/"
+        }
+    }
+}
