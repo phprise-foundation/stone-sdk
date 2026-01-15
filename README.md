@@ -40,4 +40,4 @@ Check [SECURITY.md](SECURITY.md) to learn more about our security policy.
 
 ## Changelog
 
-Check [CHANGELOG.md](CHANGELOG.md) for more information.
+Check [CHANGELOG.md](CHANGELOG.md) for more information
