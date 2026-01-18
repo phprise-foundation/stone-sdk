@@ -9,7 +9,7 @@ use GuzzleHttp\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class PagarMeClient
+class StoneClient
 {
     private ClientInterface $httpClient;
     private string $baseUrl;

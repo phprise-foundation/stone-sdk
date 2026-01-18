@@ -12,8 +12,9 @@ use StoneSdk\PagarMeClient;
 use StoneSdk\Request\OrderStoreRequest;
 use StoneSdk\Dto\Order;
 use PHPUnit\Framework\TestCase;
+use StoneSdk\StoneClient;
 
-class PagarMeClientTest extends TestCase
+class StonelientTest extends TestCase
 {
     public function testSendRequest(): void
     {
@@ -24,7 +25,7 @@ class PagarMeClientTest extends TestCase
         $handlerStack = HandlerStack::create($mock);
         $httpClient = new Client(['handler' => $handlerStack]);
 
-        $client = new PagarMeClient(
+        $client = new StoneClient(
             token: 'test_token',
             httpClient: $httpClient
         );
