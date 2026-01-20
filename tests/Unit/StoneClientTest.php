@@ -31,7 +31,7 @@ class StonelientTest extends TestCase
         );
         
         $order = new Order();
-        $request = new OrderStoreRequest($order);
+        $request = new OrderStoreRequest($order, $client->getConfig());
 
         $response = $client->send($request);
 

@@ -4,21 +4,22 @@ declare(strict_types=1);
 
 namespace StoneSdk\Request;
 
+use StoneSdk\StoneConfig;
 use StoneSdk\Dto\Order;
 use StoneSdk\Shared\Request\StoreRequest;
 use GuzzleHttp\Psr7\Uri;
 
 class OrderStoreRequest extends StoreRequest
 {
-    public function __construct(Order $order)
+    public function __construct(Order $order, StoneConfig $config)
     {
         $uri        =   new Uri(
-            sprintf('%s/%s/orders', $_ENV['PAGAR_ME_URL'], $_ENV['PAGAR_ME_VERSION'])
+            sprintf('%s/%s/orders', $config->getBaseUrl(), $config->getVersion())
         );
         $headers    =   [
             'Content-Type' => 'application/json',
-            'Authorization' => 'Basic ' . $_ENV['PAGAR_ME_TOKEN'],
-            'ServiceRefererName' => $_ENV['PAGAR_ME_SERVICE_REFERER_NAME'],
+            'Authorization' => 'Basic ' . $config->getToken(),
+            'ServiceRefererName' => $config->getServiceRefererName(),
         ];
         $body       =   $order->toSnakeCaseJson();
         $version    =   '1.1';

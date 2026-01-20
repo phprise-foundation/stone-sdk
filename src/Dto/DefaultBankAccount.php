@@ -9,6 +9,7 @@ class DefaultBankAccount extends TransferObject
     private string $accountCheckDigit;
     private string $accountNumber;
     private string $bank;
+    private string $branchCheckDigit = '0';
     private string $branchNumber;
     private string $createdAt;
     private string $holderDocument;
@@ -41,6 +42,14 @@ class DefaultBankAccount extends TransferObject
 
     public function setBank(string $bank): void {
         $this->bank = $bank;
+    }
+
+    public function getBranchCheckDigit(): string {
+        return $this->branchCheckDigit;
+    }
+
+    public function setBranchCheckDigit(string $branchCheckDigit): void {
+        $this->branchCheckDigit = $branchCheckDigit;
     }
 
     public function getBranchNumber(): string {

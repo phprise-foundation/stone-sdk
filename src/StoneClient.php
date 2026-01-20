@@ -12,10 +12,7 @@ use Psr\Http\Message\ResponseInterface;
 class StoneClient
 {
     private ClientInterface $httpClient;
-    private string $baseUrl;
-    private string $version;
-    private string $token;
-    private ?string $serviceRefererName;
+    private StoneConfig $config;
 
     public function __construct(
         string $token,
@@ -24,11 +21,13 @@ class StoneClient
         ?string $serviceRefererName = null,
         ?ClientInterface $httpClient = null
     ) {
-        $this->token = $token;
-        $this->baseUrl = rtrim($baseUrl, '/');
-        $this->version = trim($version, '/');
-        $this->serviceRefererName = $serviceRefererName;
+        $this->config = new StoneConfig($token, $baseUrl, $version, $serviceRefererName);
         $this->httpClient = $httpClient ?? new Client();
+    }
+
+    public function getConfig(): StoneConfig
+    {
+        return $this->config;
     }
 
     public function send(RequestInterface $request): ResponseInterface
@@ -38,21 +37,21 @@ class StoneClient
 
     public function getBaseUrl(): string
     {
-        return $this->baseUrl;
+        return $this->config->getBaseUrl();
     }
 
     public function getVersion(): string
     {
-        return $this->version;
+        return $this->config->getVersion();
     }
 
     public function getToken(): string
     {
-        return $this->token;
+        return $this->config->getToken();
     }
 
     public function getServiceRefererName(): ?string
     {
-        return $this->serviceRefererName;
+        return $this->config->getServiceRefererName();
     }
 }
