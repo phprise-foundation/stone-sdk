@@ -1,12 +1,12 @@
 {
-    "name": "pagarme/sdk-php",
+    "name": "stone/sdk-php",
     "description": "SDK para integração com a API da Pagar.me",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Wallace",
-            "email": "wallace@example.com"
+            "name": "Wallace Ferreira",
+            "email": "wallace.sf87@gmail.com"
         }
     ],
     "require": {
