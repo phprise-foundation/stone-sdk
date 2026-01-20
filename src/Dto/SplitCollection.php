@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Dto;
+namespace Phprise\StoneSdk\Dto;
 
-use StoneSdk\Shared\Dto\TransferObjectCollection;
+use Phprise\StoneSdk\Shared\Dto\TransferObjectCollection;
 
 class SplitCollection extends TransferObjectCollection
 {

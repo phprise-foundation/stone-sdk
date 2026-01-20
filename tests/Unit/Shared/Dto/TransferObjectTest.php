@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Tests\Unit\Shared\Dto;
+namespace Phprise\StoneSdk\Tests\Unit\Shared\Dto;
 
 use PHPUnit\Framework\TestCase;
-use StoneSdk\Dto\Item;
+use Phprise\StoneSdk\Dto\Item;
 
 class TransferObjectTest extends TestCase
 {

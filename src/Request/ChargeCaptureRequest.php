@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Request;
+namespace Phprise\StoneSdk\Request;
 
-use StoneSdk\StoneConfig;
-use StoneSdk\Dto\Capture;
+use Phprise\StoneSdk\StoneConfig;
+use Phprise\StoneSdk\Dto\Capture;
 use GuzzleHttp\Psr7\Uri;
-use StoneSdk\Shared\Request\StoreRequest;
+use Phprise\StoneSdk\Shared\Request\StoreRequest;
 
 class ChargeCaptureRequest extends StoreRequest
 {

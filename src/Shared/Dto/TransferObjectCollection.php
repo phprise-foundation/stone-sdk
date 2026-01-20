@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Shared\Dto;
+namespace Phprise\StoneSdk\Shared\Dto;
 
 use Traversable;
 use Doctrine\Common\Collections\Order;

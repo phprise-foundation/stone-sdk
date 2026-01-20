@@ -1,5 +1,5 @@
 {
-    "name": "stone/sdk-php",
+    "name": "phprise-foundation/stone-sdk",
     "description": "SDK para integração com a API da Pagar.me",
     "type": "library",
     "license": "MIT",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "StoneSdk\\": "src/"
+            "Phprise\\StoneSdk\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "StoneSdk\\Tests\\": "tests/"
+            "Phprise\\StoneSdk\\Tests\\": "tests/"
         }
     }
 }

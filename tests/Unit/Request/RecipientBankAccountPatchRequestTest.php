@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Tests\Unit\Request;
+namespace Phprise\StoneSdk\Tests\Unit\Request;
 
 use PHPUnit\Framework\TestCase;
-use StoneSdk\Dto\DefaultBankAccount;
-use StoneSdk\Request\RecipientBankAccountPatchRequest;
-use StoneSdk\StoneConfig;
+use Phprise\StoneSdk\Dto\DefaultBankAccount;
+use Phprise\StoneSdk\Request\RecipientBankAccountPatchRequest;
+use Phprise\StoneSdk\StoneConfig;
 
 class RecipientBankAccountPatchRequestTest extends TestCase
 {

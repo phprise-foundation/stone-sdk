@@ -1,8 +1,8 @@
 <?php
 
-namespace StoneSdk\Dto;
+namespace Phprise\StoneSdk\Dto;
 
-use StoneSdk\Shared\Dto\TransferObject;
+use Phprise\StoneSdk\Shared\Dto\TransferObject;
 
 class RegisterInformation extends TransferObject
 {

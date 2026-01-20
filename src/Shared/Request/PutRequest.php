@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Shared\Request;
+namespace Phprise\StoneSdk\Shared\Request;
 
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\UriInterface;

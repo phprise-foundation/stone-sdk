@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Request;
+namespace Phprise\StoneSdk\Request;
 
 use DateTime;
-use StoneSdk\Shared\Request\ShowRequest;
-use StoneSdk\StoneConfig;
+use Phprise\StoneSdk\Shared\Request\ShowRequest;
+use Phprise\StoneSdk\StoneConfig;
 
 class PagarMeOrdersListRequest extends ShowRequest
 {

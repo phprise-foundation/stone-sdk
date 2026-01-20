@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Request;
+namespace Phprise\StoneSdk\Request;
 
-use StoneSdk\StoneConfig;
-use StoneSdk\Dto\DefaultBankAccount;
-use StoneSdk\Shared\Request\PatchRequest;
+use Phprise\StoneSdk\StoneConfig;
+use Phprise\StoneSdk\Dto\DefaultBankAccount;
+use Phprise\StoneSdk\Shared\Request\PatchRequest;
 use GuzzleHttp\Psr7\Uri;
 
 class RecipientBankAccountPatchRequest extends PatchRequest
