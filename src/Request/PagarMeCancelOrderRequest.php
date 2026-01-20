@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Request;
+namespace Phprise\StoneSdk\Request;
 
 use DateTime;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\UriInterface;
-use StoneSdk\Shared\Request\PatchRequest;
-use StoneSdk\StoneConfig;
+use Phprise\StoneSdk\Shared\Request\PatchRequest;
+use Phprise\StoneSdk\StoneConfig;
 
 class PagarMeCancelOrderRequest extends PatchRequest
 {

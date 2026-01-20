@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Request;
+namespace Phprise\StoneSdk\Request;
 
-use StoneSdk\StoneConfig;
-use StoneSdk\Dto\Order;
-use StoneSdk\Shared\Request\StoreRequest;
+use Phprise\StoneSdk\StoneConfig;
+use Phprise\StoneSdk\Dto\Order;
+use Phprise\StoneSdk\Shared\Request\StoreRequest;
 use GuzzleHttp\Psr7\Uri;
 
 class OrderStoreRequest extends StoreRequest

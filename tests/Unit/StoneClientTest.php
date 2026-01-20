@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Tests\Unit;
+namespace Phprise\StoneSdk\Tests\Unit;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use StoneSdk\PagarMeClient;
-use StoneSdk\Request\OrderStoreRequest;
-use StoneSdk\Dto\Order;
+use Phprise\StoneSdk\PagarMeClient;
+use Phprise\StoneSdk\Request\OrderStoreRequest;
+use Phprise\StoneSdk\Dto\Order;
 use PHPUnit\Framework\TestCase;
-use StoneSdk\StoneClient;
+use Phprise\StoneSdk\StoneClient;
 
 class StonelientTest extends TestCase
 {

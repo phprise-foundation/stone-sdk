@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Shared\Dto;
+namespace Phprise\StoneSdk\Shared\Dto;
 
-use StoneSdk\Shared\ValueObject\StringObject;
+use Phprise\StoneSdk\Shared\ValueObject\StringObject;
 use ReflectionClass;
 use RuntimeException;
 use Stringable;

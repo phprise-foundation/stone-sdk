@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Request;
+namespace Phprise\StoneSdk\Request;
 
-use StoneSdk\StoneConfig;
-use StoneSdk\Shared\Request\ShowRequest;
+use Phprise\StoneSdk\StoneConfig;
+use Phprise\StoneSdk\Shared\Request\ShowRequest;
 use GuzzleHttp\Psr7\Uri;
 
 class RecipientShowRequest extends ShowRequest

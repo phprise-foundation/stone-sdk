@@ -1,11 +1,11 @@
-# PHPRise <Repository>
+# Stone SDK
 
-<Description Of Repository>
+SDK para integração com a API da Pagar.me.
 
 ## Installation
 
 ```bash
-composer require phprise/<repository>
+composer require phprise-foundation/stone-sdk
 ```
 
 ## Usage

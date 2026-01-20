@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk;
+namespace Phprise\StoneSdk;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

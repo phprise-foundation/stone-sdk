@@ -1,6 +1,6 @@
 <?php
 
-namespace StoneSdk\Dto;
+namespace Phprise\StoneSdk\Dto;
 
 class PhoneNumber
 {

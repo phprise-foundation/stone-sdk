@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Shared\ValueObject;
+namespace Phprise\StoneSdk\Shared\ValueObject;
 
 use Stringable;
 

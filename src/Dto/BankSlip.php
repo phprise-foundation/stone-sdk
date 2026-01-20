@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace StoneSdk\Dto;
+namespace Phprise\StoneSdk\Dto;
 
-use StoneSdk\Shared\Dto\TransferObject;
-use StoneSdk\Shared\ValueObject\ArrayObject;
+use Phprise\StoneSdk\Shared\Dto\TransferObject;
+use Phprise\StoneSdk\Shared\ValueObject\ArrayObject;
 
 class BankSlip extends TransferObject
 {
