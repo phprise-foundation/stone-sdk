@@ -17,8 +17,13 @@ abstract class TransferObject implements Stringable
         $props	=	$ref->getProperties();
         $data	=	[];
         foreach ($props as $prop) {
+            if (!$prop->isInitialized($this)) {
+                continue;
+            }
+
             $name   =   $prop->getName();
             $value  =   $prop->getValue($this);
+
             if ($value instanceof TransferObject) {
                 $data[$name]    =   $value->toArray();
                 continue;
