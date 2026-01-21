@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phprise\StoneSdk\Dto;
 
-use Phprise\StoneSdk\Shared\Dto\TransferObject;
+use Phprise\DataTransferObject\TransferObject;
 
 class Phone extends TransferObject
 {
