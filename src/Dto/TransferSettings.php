@@ -2,7 +2,7 @@
 
 namespace Phprise\StoneSdk\Dto;
 
-use Phprise\StoneSdk\Shared\Dto\TransferObject;
+use Phprise\DataTransferObject\TransferObject;
 
 class TransferSettings extends TransferObject
 {

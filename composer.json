@@ -13,7 +13,8 @@
         "php": ">=8.2",
         "guzzlehttp/guzzle": "^7.8",
         "psr/http-message": "^1.1|^2.0",
-        "doctrine/collections": "^2.1"
+        "doctrine/collections": "^2.1",
+        "phprise/data-transfer-object": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5"
