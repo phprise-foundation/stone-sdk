@@ -13,12 +13,18 @@ class ManagingPartner extends TransferObject
     private string $monthlyIncome;
     private string $name;
 
-    /** @var PhoneNumber[] */
-    private array $phoneNumbers;
+    private ?PhoneNumberCollection $phoneNumbers = null;
 
     private string $professionalOccupation;
-    private bool $selfDeclaredRepresentative;
+    private bool $selfDeclaredLegalRepresentative;
     private string $type;
+
+    public function __construct()
+    {
+        if ($this->phoneNumbers === null) {
+            $this->phoneNumbers = new PhoneNumberCollection();
+        }
+    }
 
     public function getAddress(): MainAddress {
         return $this->address;
@@ -71,15 +77,25 @@ class ManagingPartner extends TransferObject
     /**
      * @return PhoneNumber[]
      */
-    public function getPhoneNumbers(): array {
+    public function getPhoneNumbers(): PhoneNumberCollection
+    {
         return $this->phoneNumbers;
     }
 
-    /**
-     * @param PhoneNumber[] $phoneNumbers
-     */
-    public function setPhoneNumbers(array $phoneNumbers): void {
+    public function setPhoneNumbers(PhoneNumberCollection $phoneNumbers): static
+    {
         $this->phoneNumbers = $phoneNumbers;
+
+        return $this;
+    }
+
+    public function addPhoneNumber(PhoneNumber $phoneNumber): static
+    {
+        if (!$this->phoneNumbers->contains($phoneNumber)) {
+            $this->phoneNumbers->add($phoneNumber);
+        }
+
+        return $this;
     }
 
     public function getProfessionalOccupation(): string {
@@ -91,11 +107,11 @@ class ManagingPartner extends TransferObject
     }
 
     public function isSelfDeclaredRepresentative(): bool {
-        return $this->selfDeclaredRepresentative;
+        return $this->selfDeclaredLegalRepresentative;
     }
 
-    public function setSelfDeclaredRepresentative(bool $selfDeclaredRepresentative): void {
-        $this->selfDeclaredRepresentative = $selfDeclaredRepresentative;
+    public function setSelfDeclaredLegalRepresentative(bool $selfDeclaredLegalRepresentative): void {
+        $this->selfDeclaredLegalRepresentative = $selfDeclaredLegalRepresentative;
     }
 
     public function getType(): string {

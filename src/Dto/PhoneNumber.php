@@ -2,7 +2,9 @@
 
 namespace Phprise\StoneSdk\Dto;
 
-class PhoneNumber
+use Phprise\DataTransferObject\TransferObject;
+
+class PhoneNumber extends TransferObject
 {
     private string $ddd;
     private string $number;
