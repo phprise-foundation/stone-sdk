@@ -19,134 +19,177 @@ class RegisterInformation extends TransferObject
     /** @var ManagingPartner[] */
     private ?array $managingPartners;
 
-    /** @var PhoneNumber[] */
-    private array $phoneNumbers;
+    private ?PhoneNumberCollection $phoneNumbers = null;
 
     private string $professionalOccupation;
     private string $tradingName;
     private string $type;
 
-    public function getAnnualRevenue(): string {
+    /**
+     * @param string $annualRevenue
+     */
+    public function __construct()
+    {
+        if ($this->phoneNumbers === null) {
+            $this->phoneNumbers = new PhoneNumberCollection();
+        }
+    }
+
+    public function getAnnualRevenue(): string
+    {
         return $this->annualRevenue;
     }
 
-    public function setAnnualRevenue(string $annualRevenue): void {
+    public function setAnnualRevenue(string $annualRevenue): void
+    {
         $this->annualRevenue = $annualRevenue;
     }
 
-    public function getBirthdate(): string {
+    public function getBirthdate(): string
+    {
         return $this->birthdate;
     }
 
-    public function setBirthdate(string $birthdate): void {
+    public function setBirthdate(string $birthdate): void
+    {
         $this->birthdate = $birthdate;
     }
 
-    public function getCompanyName(): string {
+    public function getCompanyName(): string
+    {
         return $this->companyName;
     }
 
-    public function setCompanyName(string $companyName): void {
+    public function setCompanyName(string $companyName): void
+    {
         $this->companyName = $companyName;
     }
 
-    public function getDocument(): string {
+    public function getDocument(): string
+    {
         return $this->document;
     }
 
-    public function setDocument(string $document): void {
+    public function setDocument(string $document): void
+    {
         $this->document = $document;
     }
 
-    public function getEmail(): string {
+    public function getEmail(): string
+    {
         return $this->email;
     }
 
-    public function setEmail(string $email): void {
+    public function setEmail(string $email): void
+    {
         $this->email = $email;
     }
 
-    public function getMainAddress(): MainAddress {
+    public function getMainAddress(): MainAddress
+    {
         return $this->mainAddress;
     }
 
-    public function setMainAddress(MainAddress $mainAddress): void {
+    public function setMainAddress(MainAddress $mainAddress): void
+    {
         $this->mainAddress = $mainAddress;
     }
 
-    public function getAddress(): MainAddress {
+    public function getAddress(): MainAddress
+    {
         return $this->address;
     }
 
-    public function setAddress(MainAddress $address): void {
+    public function setAddress(MainAddress $address): void
+    {
         $this->address = $address;
     }
 
-    public function getMonthlyIncome(): string {
+    public function getMonthlyIncome(): string
+    {
         return $this->monthlyIncome;
     }
 
-    public function setMonthlyIncome(string $monthlyIncome): void {
+    public function setMonthlyIncome(string $monthlyIncome): void
+    {
         $this->monthlyIncome = $monthlyIncome;
     }
 
-    public function getName(): string {
+    public function getName(): string
+    {
         return $this->name;
     }
 
-    public function setName(string $name): void {
+    public function setName(string $name): void
+    {
         $this->name = $name;
     }
 
     /**
      * @return ManagingPartner[]
      */
-    public function getManagingPartners(): array {
+    public function getManagingPartners(): array
+    {
         return $this->managingPartners;
     }
 
     /**
      * @param ManagingPartner[] $managingPartners
      */
-    public function setManagingPartners(?array $managingPartners): void {
+    public function setManagingPartners(?array $managingPartners): void
+    {
         $this->managingPartners = $managingPartners;
     }
 
-    /**
-     * @return PhoneNumber[]
-     */
-    public function getPhoneNumbers(): array {
+    public function getPhoneNumbers(): PhoneNumberCollection
+    {
         return $this->phoneNumbers;
     }
 
-    /**
-     * @param PhoneNumber[] $phoneNumbers
-     */
-    public function setPhoneNumbers(array $phoneNumbers): void {
+    public function setPhoneNumbers(PhoneNumberCollection $phoneNumbers): static
+    {
         $this->phoneNumbers = $phoneNumbers;
+
+        return $this;
     }
 
-    public function getProfessionalOccupation(): string {
+    public function addPhoneNumber(PhoneNumber $phoneNumber): static
+    {
+        if (!$this->phoneNumbers->contains($phoneNumber)) {
+            $this->phoneNumbers->add($phoneNumber);
+        }
+
+        return $this;
+    }
+
+
+    public function getProfessionalOccupation(): string
+    {
         return $this->professionalOccupation;
     }
 
-    public function setProfessionalOccupation(string $professionalOccupation): void {
+    public function setProfessionalOccupation(string $professionalOccupation): void
+    {
         $this->professionalOccupation = $professionalOccupation;
     }
 
-    public function getTradingName(): string {
+    public function getTradingName(): string
+    {
         return $this->tradingName;
     }
 
-    public function setTradingName(string $tradingName): void {
+    public function setTradingName(string $tradingName): void
+    {
         $this->tradingName = $tradingName;
     }
 
-    public function getType(): string {
+    public function getType(): string
+    {
         return $this->type;
     }
 
-    public function setType(string $type): void {
+    public function setType(string $type): void
+    {
         $this->type = $type;
     }
 }
