@@ -8,13 +8,14 @@ use Phprise\DataTransferObject\TransferObject;
 
 class Recipient extends TransferObject
 {
+    private ?string $name;
+    private ?string $email;
+    private ?string $document;
+    private ?string $description;
+    private ?string $type;
+    private ?string $status;
+
     public function __construct(
-        private ?string $name = null,
-        private ?string $email = null,
-        private ?string $document = null,
-        private ?string $description = null,
-        private ?string $type = null,
-        private ?string $status = null,
         private ?RegisterInformation $registerInformation = null,
         private ?DefaultBankAccount $defaultBankAccount = null,
         private ?TransferSettings $transferSettings = null,

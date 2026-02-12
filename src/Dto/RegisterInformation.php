@@ -17,7 +17,7 @@ class RegisterInformation extends TransferObject
     private string $name;
 
     /** @var ManagingPartner[] */
-    private array $managingPartners;
+    private ?array $managingPartners;
 
     /** @var PhoneNumber[] */
     private array $phoneNumbers;
@@ -108,7 +108,7 @@ class RegisterInformation extends TransferObject
     /**
      * @param ManagingPartner[] $managingPartners
      */
-    public function setManagingPartners(array $managingPartners): void {
+    public function setManagingPartners(?array $managingPartners): void {
         $this->managingPartners = $managingPartners;
     }
 
