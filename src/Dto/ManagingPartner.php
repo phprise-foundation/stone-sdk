@@ -106,7 +106,7 @@ class ManagingPartner extends TransferObject
         $this->professionalOccupation = $professionalOccupation;
     }
 
-    public function isSelfDeclaredRepresentative(): bool {
+    public function isSelfDeclaredLegalRepresentative(): bool {
         return $this->selfDeclaredLegalRepresentative;
     }
 
