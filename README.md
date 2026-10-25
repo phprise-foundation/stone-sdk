@@ -1,5 +1,9 @@
 # Stone SDK
 
+> [!WARNING]
+> **Deprecated — no longer maintained.** This repository will be archived.
+> Its replacement is [`phprise/sdk-stone-psp`](https://github.com/phprise-foundation/sdk-stone-psp).
+
 SDK para integração com a API da Pagar.me.
 
 ## Installation
